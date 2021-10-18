@@ -6,6 +6,7 @@ const About = () => {
   return (
     <div className="container">
       <h1 className="about-title mt-5 fw-bolder container">About Us</h1>
+      <hr className="text-danger" />
       <div className="d-flex ">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 align-items-center text-center ">

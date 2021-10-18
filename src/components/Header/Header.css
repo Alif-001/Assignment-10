@@ -1,7 +1,7 @@
 .menu a:hover {
-  color: aqua !important;
+  color: rgb(13, 202, 240) !important;
 }
 
 .menu a:focus {
-  color: red !important;
+  color: rgb(220, 53, 69) !important;
 }
