@@ -5,8 +5,8 @@ import aboutImg from "./../../../images/about-img/staff.png";
 const About = () => {
   return (
     <div className="container">
-      <h1 className="about-title mt-5 fw-bolder">About Us</h1>
-      <div className="d-flex">
+      <h1 className="about-title mt-5 fw-bolder container">About Us</h1>
+      <div className="d-flex ">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 align-items-center text-center ">
             <div className="mt-md-5 pt-5 mt-sm-0 mt-lg-0 ">
