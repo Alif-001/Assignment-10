@@ -11,7 +11,7 @@ const NotFound = () => {
         <img src={background} alt="" className="img-fluid" />
         <h1 className="not-found-message container">
           We are sorry,
-          <span className="text-danger fw-bold"> page not found</span>.
+          <span className="text-danger fw-bold"> page not found.</span>
         </h1>
         <button className="btn btn-info fw-bold notFound-btn">
           <Nav.Link as={NavLink} to="/home" className="text-white">
