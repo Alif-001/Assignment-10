@@ -1,6 +1,6 @@
 import React from "react";
 
-const Regiseter = () => {
+const Register = () => {
   return (
     <div>
       <h1>this is register</h1>
@@ -8,4 +8,4 @@ const Regiseter = () => {
   );
 };
 
-export default Regiseter;
+export default Register;

@@ -9,10 +9,16 @@ const Header = () => {
   const element = <FontAwesomeIcon icon={faMedkit} />;
   const element2 = <FontAwesomeIcon icon={faUser} />;
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar
+      className=""
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
       <Container>
         <Navbar.Brand as={NavLink} to="/home">
-          <span className=" fa-2x">{element} </span>
+          <span className=" fa-2x text-danger">{element} </span>
           <span className="fs-2 fw-bold">Health Ninja </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

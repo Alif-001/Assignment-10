@@ -5,8 +5,9 @@ import Header from "./components/Header/Header";
 import About from "./components/Pages/About/About";
 import Contact from "./components/Pages/Contact/Contact";
 import Home from "./components/Pages/Home/Home";
+import NotFound from "./components/Pages/Home/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
-import Regiseter from "./components/Pages/Register/Regiseter";
+import Register from "./components/Pages/Register/Register";
 import Services from "./components/Pages/Services/Services";
 
 function App() {
@@ -34,10 +35,11 @@ function App() {
             <Login></Login>
           </Route>
           <Route path="/register">
-            <Regiseter></Regiseter>
+            <Register></Register>
           </Route>
-          <Route></Route>
-          <Route></Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
