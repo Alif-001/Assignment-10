@@ -1,0 +1,7 @@
+.menu a:hover {
+  color: aqua !important;
+}
+
+.menu a:focus {
+  color: red !important;
+}
