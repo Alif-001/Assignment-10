@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import About from "./components/Pages/About/About";
 import Contact from "./components/Pages/Contact/Contact";
 import Home from "./components/Pages/Home/Home";
-import NotFound from "./components/Pages/Home/NotFound/NotFound";
+import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
 import Services from "./components/Pages/Services/Services";
