@@ -10,14 +10,13 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link line-through p-10 "
+          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          hola
         </a>
-        <h1 className="text-red-600">thsdksf</h1>
       </header>
     </div>
   );
