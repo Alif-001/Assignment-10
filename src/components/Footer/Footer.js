@@ -3,8 +3,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer fixed-bottom bg-secondary ">
-      <h1> this is footer</h1>
+    <div className="footer">
+      <h1 className="p-4 m-0"> this is footer</h1>
     </div>
   );
 };
