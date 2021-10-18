@@ -9,7 +9,7 @@ const About = () => {
       <div className="d-flex">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 align-items-center text-center ">
-            <div className="mt-md-5 pt-5 mt-sm-0 ">
+            <div className="mt-md-5 pt-5 mt-sm-0 mt-lg-0 ">
               <div className="mt-5">
                 <h2>We Would Love To See You Smile</h2>
               </div>
