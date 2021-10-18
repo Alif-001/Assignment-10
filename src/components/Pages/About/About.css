@@ -1,0 +1,10 @@
+.about-text {
+  text-align: left;
+}
+.about-img {
+  text-align: end !important;
+}
+
+.about-title {
+  font-size: 3.5rem !important;
+}
