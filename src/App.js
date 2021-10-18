@@ -17,6 +17,9 @@ function App() {
         >
           hola
         </a>
+        <button type="button" className="btn btn-primary">
+          Primary
+        </button>
       </header>
     </div>
   );
