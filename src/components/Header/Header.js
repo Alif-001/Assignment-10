@@ -19,11 +19,13 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={NavLink} to="/home">
           <span className=" fa-2x text-danger">{element} </span>
-          <span className="fs-2 fw-bold">Health Ninja </span>
+          <span className="fs-2 fw-bold text-wrap">
+            Health <span className="text-danger">Ninja</span>{" "}
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto fw-bold fs-5 menu">
+          <Nav className="ms-auto fw-bold fs-5 menu me-2">
             <Nav.Link as={NavLink} to="/home">
               Home
             </Nav.Link>

@@ -1,6 +1,11 @@
-.not-found {
-  background-repeat: no-repeat;
-}
 .not-found-message {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.not-found img {
+  height: 400px;
+}
+.notFound-btn {
+  margin-bottom: 200px;
 }
