@@ -19,7 +19,7 @@ const service = ({ service }) => {
           <Card.Footer className="card-f bg-info">
             <Link
               to="/notfound"
-              className="btn btn-info text-white details-btn"
+              className="btn btn-info text-white details-btn  btn-lg"
             >
               Read More
             </Link>
