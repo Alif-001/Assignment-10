@@ -94,11 +94,11 @@ const Register = () => {
                 <label htmlFor="repassword">Re-Password</label>
               </div>
               <div className="register_footer d-flex px-2">
-                <p>Already a member? </p>
+                <p className="px-2">Already a member? </p>
                 <NavLink to="/login">Go to Login</NavLink>
               </div>
               <div className="text-center">
-                <button className="btn btn-info fw-bold text-white">
+                <button className="btn btn-primary fw-bold text-white">
                   Register
                 </button>
               </div>

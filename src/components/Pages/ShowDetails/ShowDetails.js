@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import useServices from "../../../hooks/useServices";
 
+// show details page
 const ShowDetails = () => {
   const { id } = useParams();
   const [services] = useServices();

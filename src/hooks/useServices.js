@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// fetching data
+
 const useServices = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {

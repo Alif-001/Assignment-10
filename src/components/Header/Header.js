@@ -10,6 +10,7 @@ const Header = () => {
   const { user, LogOut } = useAuth();
   const element = <FontAwesomeIcon icon={faMedkit} />;
   const element2 = <FontAwesomeIcon icon={faUser} />;
+
   return (
     <Navbar
       className=""
@@ -18,6 +19,7 @@ const Header = () => {
       bg="light"
       variant="light"
     >
+      {/* logo section  */}
       <Container>
         <Navbar.Brand as={NavLink} to="/home">
           <span className=" fa-2x text-danger">{element} </span>
@@ -40,7 +42,7 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
-            {user?.provider ? (
+            {user?.providerId ? (
               <>
                 {" "}
                 <div className="text-center d-flex userId">{element2}</div>

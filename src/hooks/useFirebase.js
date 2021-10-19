@@ -46,15 +46,13 @@ const useFirebase = () => {
     return unsubscribed;
   }, [auth]);
 
-  //Sign In With Email password
+  // Email password
   const signInEmail = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // Sing Up With Email and Password
-
   const signUp = (email, password) => {
-    // setName(name);
+    // setName
     createUserWithEmailAndPassword(auth, email, password)
       .then((user) => {
         console.log(user);
@@ -64,7 +62,7 @@ const useFirebase = () => {
       });
   };
 
-  //LogOut User
+  //LogOut
   const LogOut = () => {
     signOut(auth).then(() => {
       setUser({});

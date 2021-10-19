@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HomeDetail = ({ service }) => {
   const { id, img, title, details } = service;

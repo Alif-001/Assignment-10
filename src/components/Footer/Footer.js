@@ -4,18 +4,18 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <footer className="container-fluid m-0 footer_top mt-5 bg-light">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 col-lg-4 text-center">
             <div className="company_details text-start ps-4">
-              <h2 className="pt-3 ">About Us</h2>
+              <h2 className="pt-3 ">Our Mission</h2>
               <p className="pt-2">
                 Over time, the digital landscape has transformed, and the way
                 businesses use online technology has changed. WebAlive has also
                 evolved, mastering new skills, developing new products and
                 continuing to provide cutting-edge web design, application
-                development, and ecommerce solutions to our clients.
+                development, and e-commerce solutions to our clients.
               </p>
             </div>
           </div>
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="col-12 col-sm-12 col-md-6 col-lg-4 pt-3">
             <div className="link ps-2">
               <h2> Links</h2>
-              <ul>
+              <ul className="">
                 <li>
                   <NavLink to="/home">Home</NavLink>
                 </li>
@@ -52,7 +52,7 @@ const Footer = () => {
           <p className="m-0">Copyright &copy; 2021 Health Cear</p>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
