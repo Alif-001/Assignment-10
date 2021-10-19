@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Srervice.css";
 
 const service = ({ service }) => {
-  const { img, title, details } = service;
+  const { id, img, title, details } = service;
   return (
     <Col className="my-5 ">
       <Card className="align-items-stretch col-md-12 ">
@@ -17,12 +17,12 @@ const service = ({ service }) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer className="card-f bg-info">
-            <Link
-              to="/notfound"
+            <NavLink
+              to={`/services/${id}`}
               className="btn btn-info text-white details-btn  btn-lg"
             >
               Read More
-            </Link>
+            </NavLink>
           </Card.Footer>
         </div>
       </Card>

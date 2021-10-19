@@ -9,6 +9,7 @@ import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
 import Services from "./components/Pages/Services/Services";
+import ShowDetails from "./components/Pages/ShowDetails/ShowDetails";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-
+          <Route exact path="/services/:id">
+            <ShowDetails></ShowDetails>
+          </Route>
           <Route path="/about">
             <About></About>
           </Route>
