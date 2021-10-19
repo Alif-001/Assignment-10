@@ -19,10 +19,10 @@ general, and not just patients.
 
 ### Tool used to create this web site
 
-. vscode
-. rect
-. react-font-awesome
-. fire-base
-. react-bootstrap
-. git
-. github
+- . vscode
+- . rect
+- . react-font-awesome
+- . fire-base
+- . react-bootstrap
+- . git
+- . github
