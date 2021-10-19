@@ -47,7 +47,7 @@ const Header = () => {
                 <span className="nav-item">
                   {" "}
                   <span className="nav-link">
-                    {user?.displayName || user.email}{" "}
+                    {user?.displayName || user.email || user.provider}{" "}
                   </span>
                 </span>
                 <span className="nav-item">

@@ -1,8 +1,16 @@
 .footer {
   margin: 0;
   padding: 0;
-  background-color: bisque;
+  background-color: rgb(170, 10, 10);
+  text-decoration: none;
+  color: beige;
 }
 .footer h1 {
   padding: 10px;
+}
+.link a {
+  text-decoration: none !important;
+}
+.link ul {
+  list-style: none !important;
 }
