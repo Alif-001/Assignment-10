@@ -9,13 +9,15 @@ general, and not just patients.
 
 ## About us
 
-                    We use the latest technology and equipment that helps treat
-                    patients effectively and efficiently.We meet the needs of
-                    patients by offering specialty services that go far beyond
-                    primary care.These programs seek to improve the health care
-                    of people through various discoveries.Healthcare is a team
-                    effort. Each healthcare provider is like a member of the
-                    team with a special role.
+- We use the latest technology and equipment that helps treat patients effectively and efficiently.
+
+- We meet the needs of patients by offering specialty services that go far beyond primary care.
+
+- These programs seek to improve the health care of people through various discoveries.
+
+- Healthcare is a team effort. Each healthcare provider is like a member of the team with a special role.
+
+* We care for the growing needs of our community.
 
 ### Tool used to create this web site
 
