@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React, { useEffect, useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
@@ -6,7 +8,7 @@ import { useForm } from "react-hook-form";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
-  /* eslint-disable no-unused-expressions */
+
   const { user, signInGoogle, signUp, errors } = useAuth();
   const [error, setError] = useState("");
   const history = useHistory();
