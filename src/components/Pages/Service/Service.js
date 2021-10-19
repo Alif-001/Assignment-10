@@ -6,25 +6,25 @@ import "./Srervice.css";
 const service = ({ service }) => {
   const { img, title, details } = service;
   return (
-    <Col className="my-5">
-      <Card className="align-items-stretch col-md-12">
-        <Card.Img
-          variant="top"
-          className="img-thumbnail service-img img-fluid img-responsive"
-          src={img}
-        />
-        <Card.Body className="h-100 fix-h ">
-          <Card.Title className="fs-5">{title}</Card.Title>
-
-          <Card.Text className="service-text container text-wrap p-0">
-            {details.slice(0, 180)}...
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer className="card-f">
-          <Link to="/notfound" className="btn btn-info">
-            Details
-          </Link>
-        </Card.Footer>
+    <Col className="my-5 ">
+      <Card className="align-items-stretch col-md-12 ">
+        <div className="card-3">
+          <Card.Img variant="top" className=" rounded-5 img-fluid " src={img} />{" "}
+          <Card.Body className="h-100 fix-h ">
+            <Card.Title className="fs-5">{title}</Card.Title>
+            <Card.Text className="service-text container text-wrap p-0">
+              {details.slice(0, 180)}...
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer className="card-f bg-info">
+            <Link
+              to="/notfound"
+              className="btn btn-info text-white details-btn"
+            >
+              Read More
+            </Link>
+          </Card.Footer>
+        </div>
       </Card>
     </Col>
   );

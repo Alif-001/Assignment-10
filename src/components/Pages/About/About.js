@@ -40,16 +40,6 @@ const About = () => {
                     effort. Each healthcare provider is like a member of the
                     team with a special role.
                   </p>
-                  <p>
-                    Through more than 20 years of providing innovative solutions
-                    that improve health and quality of life for those in need of
-                    in-home health services, Health care has established itself
-                    as one of the most experienced home care companies in the
-                    industry. Our approach to quality care focuses on a
-                    commitment to providing a level of expertise, training,
-                    patient service, and monitoring that is difficult to match
-                    in our industry.
-                  </p>
                 </div>
               </div>
             </div>
