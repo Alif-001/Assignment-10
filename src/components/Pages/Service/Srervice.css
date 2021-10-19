@@ -1,0 +1,12 @@
+.service-text {
+  text-align: left;
+}
+
+.fix-h {
+  min-height: 230px !important;
+}
+
+.card-f {
+  background-color: white !important;
+  border: none !important;
+}
