@@ -1,6 +1,11 @@
 # HEALTH CARE [link:https://health-care-official.web.app](https://health-care-official.web.app)
 
-.this web is about a hospital . in here you can find good health services.
+. this web is about a hospital . in here you can find good health services.
+Our institute provides care for our region’s most precious
+resource: human. We care for the growing needs of our
+community. We build systems for providing health services
+for individuals, families, communities and populations in
+general, and not just patients.
 
 ## About us
 
