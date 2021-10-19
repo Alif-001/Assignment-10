@@ -5,6 +5,8 @@ import "./Banner.css";
 import img1 from "./../../images/Carousel-img/img1.jpg";
 import img2 from "./../../images/Carousel-img/img2.jpg";
 
+// Carousel
+
 const Banner = () => {
   return (
     <section className="container-fluid p-0">
