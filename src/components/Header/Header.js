@@ -40,14 +40,14 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
-            {user?.email ? (
+            {user?.provider ? (
               <>
                 {" "}
                 <div className="text-center d-flex userId">{element2}</div>
                 <span className="nav-item">
                   {" "}
                   <span className="nav-link">
-                    {user?.displayName || user.email || user.provider}{" "}
+                    {user?.displayName || user.email}{" "}
                   </span>
                 </span>
                 <span className="nav-item">
