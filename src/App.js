@@ -10,10 +10,12 @@ import Login from "./components/Pages/Login/Login";
 import Register from "./components/Pages/Register/Register";
 import Services from "./components/Pages/Services/Services";
 import ShowDetails from "./components/Pages/ShowDetails/ShowDetails";
+import AuthProvider from "./context/AuthProvider";
+import PrivetRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -23,15 +25,15 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route exact path="/services/:id">
+          <PrivetRoute exact path="/services/:id">
             <ShowDetails></ShowDetails>
-          </Route>
+          </PrivetRoute>
           <Route path="/about">
             <About></About>
           </Route>
-          <Route path="/services">
+          <PrivetRoute path="/services">
             <Services></Services>
-          </Route>
+          </PrivetRoute>
           <Route path="/contact">
             <Contact></Contact>
           </Route>
@@ -47,7 +49,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 

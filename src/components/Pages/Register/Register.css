@@ -1,0 +1,21 @@
+.register {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.form-control:focus {
+  box-shadow: none !important;
+  border: 2px solid #000;
+}
+
+.socal_btn {
+  border: none !important;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 576px) {
+  .register {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}

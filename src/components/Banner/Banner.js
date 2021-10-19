@@ -39,7 +39,7 @@ const Banner = () => {
                 <p className="banner_text d-flex  justify-content-center">
                   efforts made to maintain or restore physical, mental, or ....
                 </p>
-                <button className="banner_btn btn">Book Now</button>
+                <button className="banner_btn btn">Read More</button>
               </div>
             </div>
           </div>
