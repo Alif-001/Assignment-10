@@ -20,7 +20,7 @@ const Header = () => {
         <Navbar.Brand as={NavLink} to="/home">
           <span className=" fa-2x text-danger">{element} </span>
           <span className="fs-2 fw-bold text-wrap">
-            Health <span className="text-danger">Ninja</span>{" "}
+            Health <span className="text-danger">Care</span>{" "}
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

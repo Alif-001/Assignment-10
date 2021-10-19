@@ -1,4 +1,5 @@
-.about-text {
+.about-text,
+h2 {
   text-align: left;
   font-family: "Oxygen", sans-serif;
 }

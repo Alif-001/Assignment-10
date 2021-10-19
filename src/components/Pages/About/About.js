@@ -11,31 +11,44 @@ const About = () => {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 align-items-center text-center ">
             <div className="mt-md-5 pt-5 mt-sm-0 mt-lg-0 ">
-              <div className="mt-5">
-                <h2>We Would Love To See You Smile</h2>
+              <div className="mt-5 p-2">
+                <h2>
+                  We thrive on building a healthy and solid community for all
+                  individuals.
+                </h2>
               </div>
               <div className="d-flex  about-text">
                 <div className="p-2 ">
                   <p className="">
-                    Distinctively re-engineer revolutionary meta-services and
-                    premium architectures. Intrinsically incubate intuitive
-                    opportunities and real-time potentialities. Globally
-                    revolutionize global sources through interoperable services.
+                    Our institute provides care for our region’s most precious
+                    resource: human. We care for the growing needs of our
+                    community. We build systems for providing health services
+                    for individuals, families, communities and populations in
+                    general, and not just patients.
                   </p>
                   <p className="">
-                    Appropriately communicate one-to-one technology after
-                    plug-and-play networks and worldwide potentialities.
+                    We care for the growing needs of our community. We build
+                    systems for providing health services for individuals,
+                    families, communities and populations in general.
                   </p>
                   <p>
-                    Podcasting operational change management inside of workflows
-                    to establish a framework. Taking seamless key performance
-                    indicators offline.
+                    We use the latest technology and equipment that helps treat
+                    patients effectively and efficiently.We meet the needs of
+                    patients by offering specialty services that go far beyond
+                    primary care.These programs seek to improve the health care
+                    of people through various discoveries.Healthcare is a team
+                    effort. Each healthcare provider is like a member of the
+                    team with a special role.
                   </p>
                   <p>
-                    Keeping your eye on the ball while performing a deep dive on
-                    the start-up mentality to derive convergence on
-                    cross-platform integration. Dramatically mesh low-risk
-                    high-yield alignments before transparent e-tailers.
+                    Through more than 20 years of providing innovative solutions
+                    that improve health and quality of life for those in need of
+                    in-home health services, Health care has established itself
+                    as one of the most experienced home care companies in the
+                    industry. Our approach to quality care focuses on a
+                    commitment to providing a level of expertise, training,
+                    patient service, and monitoring that is difficult to match
+                    in our industry.
                   </p>
                 </div>
               </div>
