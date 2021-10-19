@@ -47,7 +47,8 @@ const Login = () => {
             ) : (
               ""
             )}
-            <h3 className="title text-center">Login</h3>
+            <h3 className="title text-start fw-bold">Login</h3>
+            <hr className="text-danger" />
             <form onSubmit={handleSubmit(handelSignIn)}>
               <div className="form-floating my-3">
                 <input

@@ -50,7 +50,8 @@ const Register = () => {
               ""
             )}
 
-            <h3 className="title text-center">Register</h3>
+            <h3 className="title text-start fw-bold">Register</h3>
+            <hr className="text-danger" />
             <form onSubmit={handleSubmit(hendelSignUp)}>
               <div className="form-floating my-3">
                 <input
