@@ -2,6 +2,7 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
+  GithubAuthProvider,
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword,
@@ -13,26 +14,36 @@ initializeFirebase();
 const useFirebase = () => {
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const [user, setUser] = useState({});
   const [errors, setError] = useState("");
 
-  // const [name, setName] = useState("");
   //Sign In With  Google
   const signInGoogle = () => {
     signInWithPopup(auth, googleProvider).then((result) => {
       setUser(result.user);
     });
   };
+  const githubLogin = () => {
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
 
   //Update User
   useEffect(() => {
-    const unsubscriber = onAuthStateChanged(auth, (user) => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       }
     });
 
-    return unsubscriber;
+    return unsubscribed;
   }, [auth]);
 
   //Sign In With Email password
@@ -59,7 +70,15 @@ const useFirebase = () => {
       setUser({});
     });
   };
-  return { user, signInGoogle, LogOut, signInEmail, errors, signUp };
+  return {
+    user,
+    signInGoogle,
+    githubLogin,
+    LogOut,
+    signInEmail,
+    errors,
+    signUp,
+  };
 };
 
 export default useFirebase;

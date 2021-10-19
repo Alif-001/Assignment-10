@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 const Register = () => {
   const { register, handleSubmit } = useForm();
 
-  const { user, signInGoogle, signUp, errors } = useAuth();
+  const { user, signInGoogle, githubLogin, signUp, errors } = useAuth();
   const [error, setError] = useState("");
   const history = useHistory();
   useEffect(() => {
@@ -49,14 +49,7 @@ const Register = () => {
             ) : (
               ""
             )}
-            <div className="d-flex">
-              <button
-                onClick={signInGoogle}
-                className="btn btn-sm btn-danger socal_btn"
-              >
-                <i className="fab fa-google"></i> Sign In
-              </button>
-            </div>
+
             <h3 className="title text-center">Register</h3>
             <form onSubmit={handleSubmit(hendelSignUp)}>
               <div className="form-floating my-3">
@@ -99,8 +92,8 @@ const Register = () => {
                 />
                 <label htmlFor="repassword">Re-Password</label>
               </div>
-              <div className="register_footer d-flex">
-                <p>Already a member?</p>
+              <div className="register_footer d-flex px-2">
+                <p>Already a member? </p>
                 <NavLink to="/login">Go to Login</NavLink>
               </div>
               <div className="text-center">
@@ -109,6 +102,25 @@ const Register = () => {
                 </button>
               </div>
             </form>
+          </div>{" "}
+          <div className="d-flex justify-content-evenly">
+            <div className="d-flex mx-2">
+              <span
+                onClick={signInGoogle}
+                className=" btn btn-sm btn-info social_btn social_btn  text-white border  rounded"
+              >
+                {" "}
+                Sign In With Google
+              </span>
+            </div>
+            <div className="d-flex">
+              <span
+                onClick={githubLogin}
+                className="btn btn-sm  btn-dark social_btn"
+              >
+                Sign In With Github
+              </span>
+            </div>
           </div>
         </div>
       </div>

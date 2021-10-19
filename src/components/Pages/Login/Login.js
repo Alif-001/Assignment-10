@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-  const { user, signInGoogle, signInEmail, error } = useAuth();
+  const { user, signInGoogle, githubLogin, signInEmail, error } = useAuth();
 
   const history = useHistory();
   const location = useLocation();
@@ -70,24 +70,36 @@ const Login = () => {
                 <label htmlFor="floatingPassword">Password</label>
               </div>
               <div className="register_footer d-flex">
-                <p>Create a New Account</p>
-                <NavLink to="/register"> Go to Register</NavLink>
+                <p>Don't have an account?</p>
+                <NavLink to="/register" className="ps-2">
+                  {" "}
+                  Create account.
+                </NavLink>
               </div>
               <div className="text-center mb-4">
-                <button className="btn btn-info  fw-bold text-white">
+                <button className="btn btn-primary  fw-bold text-white">
                   Login
                 </button>
               </div>
             </form>
-            <hr />
-
-            <div className="d-flex">
-              <button
-                onClick={signInGoogle}
-                className="btn btn-sm btn-danger socal_btn"
-              >
-                <i className="fab fa-google"></i> Sign In
-              </button>
+            <div className="d-flex justify-content-evenly">
+              <div className="d-flex mx-2">
+                <span
+                  onClick={signInGoogle}
+                  className=" btn btn-sm btn-info social_btn social_btn  text-white border  rounded"
+                >
+                  {" "}
+                  Sign In With Google
+                </span>
+              </div>
+              <div className="d-flex">
+                <span
+                  onClick={githubLogin}
+                  className="btn btn-sm  btn-dark social_btn"
+                >
+                  Sign In With Github
+                </span>
+              </div>
             </div>
           </div>
         </div>

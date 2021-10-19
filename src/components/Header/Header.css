@@ -10,3 +10,7 @@
 .navbar-light .navbar-nav .show > .nav-link {
   color: rgb(220, 53, 69);
 }
+.userId {
+  text-align: center !important;
+  padding-top: 10px;
+}

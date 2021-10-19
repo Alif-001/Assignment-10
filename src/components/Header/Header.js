@@ -1,11 +1,13 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedkit, faUser } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { user, LogOut } = useAuth();
   const element = <FontAwesomeIcon icon={faMedkit} />;
   const element2 = <FontAwesomeIcon icon={faUser} />;
   return (
@@ -38,33 +40,40 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/login">
-              Login
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/Register">
-              Register
-            </Nav.Link>
-            {/* <NavDropdown
-              title={
-                <img
-                  style={{
-                    width: "45px",
-                    borderRadius: "50%",
-                  }}
-                  src={photoURL} 
-                  alt={element2}
-                />
-              }
-              id="collasible-nav-dropdown"
-            >
-              <div className="text-center">
-                <h6>name</h6>
-                <p className="m-0 mb-2"></p>
-                <button onClick={logOut} className="btn btn-primary">
-                  Sign Out
-                </button>
-              </div>
-            </NavDropdown> */}
+            {user?.email ? (
+              <>
+                {" "}
+                <div className="text-center d-flex userId">{element2}</div>
+                <span className="nav-item">
+                  {" "}
+                  <span className="nav-link">
+                    {user?.displayName || user.email}{" "}
+                  </span>
+                </span>
+                <span className="nav-item">
+                  <button
+                    onClick={LogOut}
+                    title="LogOUt"
+                    className="nav-link logout btn btn-secondary btn-sm text-white text-center mt-1 "
+                  >
+                    LogOut
+                  </button>
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="nav-item">
+                  <NavLink to="/login" className="nav-link">
+                    Login
+                  </NavLink>
+                </span>
+                <span className="nav-item">
+                  <NavLink to="/register" className="nav-link">
+                    Register
+                  </NavLink>
+                </span>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
