@@ -1,131 +1,140 @@
-/* eslint-disable no-unused-expressions */
-
-import React, { useEffect, useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
-import "./Register.css";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import useFirebase from "../../../hooks/useFirebase";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 const Register = () => {
-  const { register, handleSubmit } = useForm();
+  const { handleGoogleLogin, handleGithubLogin, handleUserRegister } =
+    useFirebase();
 
-  const { user, signInGoogle, githubLogin, signUp, errors } = useAuth();
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const location = useLocation();
   const history = useHistory();
-  useEffect(() => {
-    user?.email ? history.push("/") : "";
-  }, [user, history]);
+  const [user, setUser] = useState([]);
+  const [error, setError] = useState("");
 
-  const hendelSignUp = ({ name, email, password, repassword }) => {
-    const emailregex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
-
-    if (!name || !email || !password) {
-      setError("Input Field is Required");
-      return;
-    } else if (emailregex.test(email) === false) {
-      setError("E-mail Not Validate");
-      return;
-    } else if (password !== repassword) {
-      setError("Passord Not Match");
-      return;
-    } else {
-      setError("");
-      signUp(email, password);
-    }
+  const hanldeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const hanldePassword = (e) => {
+    setPassword(e.target.value);
   };
 
-  return (
-    <section className="container register">
-      <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 col-lg-6 mx-auto">
-          <div className="register">
-            {error || errors ? (
-              <>
-                <div className="alert alert-danger" role="alert">
-                  {error}
-                  {errors}
-                </div>
-              </>
-            ) : (
-              ""
-            )}
+  // console.log(email, password);
 
-            <h3 className="title text-start fw-bold">Register</h3>
-            <hr className="text-danger" />
-            <form onSubmit={handleSubmit(hendelSignUp)}>
-              <div className="form-floating my-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Enter Your Name"
-                  {...register("name")}
-                />
-                <label htmlFor="name">Enter Your Name</label>
+  const handleRegister = () => {
+    handleUserRegister(email, password)
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirectURL);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+  const redirectURL = location.state?.form || "/home";
+  const signUpWithGoogle = () => {
+    handleGoogleLogin()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirectURL);
+      })
+      .catch((error) => setError(error.message));
+  };
+  const loginWithGitHub = () => {
+    handleGithubLogin()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirectURL);
+      })
+      .catch((error) => setError(error.message));
+  };
+  return (
+    <div className="div">
+      <div id="login" className="py-4 py-sm-5 page-signin">
+        <Container>
+          <div className=" p-4 p-md-5">
+            {error && (
+              <div className="alert alert-danger" role="alert">
+                {error}
               </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="email"
-                  placeholder="Email address"
-                  {...register("email")}
-                />
-                <label htmlFor="email">Email address</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  placeholder="Password"
-                  {...register("password")}
-                />
-                <label htmlFor="password">Password</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="repassword"
-                  placeholder="Re-Password"
-                  {...register("repassword")}
-                />
-                <label htmlFor="repassword">Re-Password</label>
-              </div>
-              <div className="register_footer d-flex px-2">
-                <p className="px-2">Already a member? </p>
-                <NavLink to="/login">Go to Login</NavLink>
-              </div>
-              <div className="text-center">
-                <button className="btn btn-primary fw-bold text-white">
-                  Register
-                </button>
-              </div>
-            </form>
-          </div>{" "}
-          <div className="d-flex justify-content-evenly">
-            <div className="d-flex mx-2">
-              <span
-                onClick={signInGoogle}
-                className=" btn btn-sm btn-info social_btn social_btn  text-white border  rounded"
-              >
-                {" "}
-                Sign In With Google
-              </span>
-            </div>
-            <div className="d-flex">
-              <span
-                onClick={githubLogin}
-                className="btn btn-sm  btn-dark social_btn"
-              >
-                Sign In With Github
-              </span>
-            </div>
+            )}
+            <Row>
+              {" "}
+              <h1 className="title fw-bold"> Create Account</h1>
+              <hr className="text-danger my-4" />
+              <Col xl={8} md={7}>
+                <div>
+                  <Form.Group className="my-3 " controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      onChange={hanldeEmail}
+                      type="email"
+                      placeholder="Enter email"
+                    />
+                    <Form.Text className="text-muted">
+                      We'll never share your email with anyone else.
+                    </Form.Text>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                      onChange={hanldePassword}
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check
+                      type="checkbox"
+                      label={
+                        <>
+                          I agree to the{" "}
+                          <Link to="/notfound">Terms and Conditions</Link>
+                        </>
+                      }
+                    />
+                  </Form.Group>
+                  <Button
+                    onClick={handleRegister}
+                    variant="primary"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+
+                  <div className="col-xs-12 col-sm-12 col-md-12 mt-3">
+                    <p className="m-0">
+                      Already have an account?
+                      <Link className="ms-2" to="/login">
+                        Log In
+                      </Link>
+                    </p>
+                  </div>
+
+                  <div className="login-btn mt-4">
+                    <button
+                      onClick={signUpWithGoogle}
+                      className="btn btn-info text-white me-2"
+                    >
+                      Sign In With Google
+                    </button>
+                    <button
+                      onClick={loginWithGitHub}
+                      className="btn btn-dark m-2"
+                    >
+                      Sign In With Github
+                    </button>
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </div>
-        </div>
+        </Container>
       </div>
-    </section>
+    </div>
   );
 };
 

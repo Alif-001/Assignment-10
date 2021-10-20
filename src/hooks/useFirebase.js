@@ -1,3 +1,4 @@
+import FirebaseInit from "./../Firebase/Firebase.init";
 import {
   getAuth,
   signInWithPopup,
@@ -5,77 +6,73 @@ import {
   GithubAuthProvider,
   onAuthStateChanged,
   signOut,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
+
 import { useEffect, useState } from "react";
-import initializeFirebase from "../Firebase/Firebase.init";
-initializeFirebase();
+import { useHistory } from "react-router";
+
+FirebaseInit();
+
 const useFirebase = () => {
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+  const history = useHistory();
+  const redirectURL = "/home";
+
   const [user, setUser] = useState({});
-  const [errors, setError] = useState("");
+  const [error] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
-  //Sign In With  Google
-  const signInGoogle = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-    });
-  };
-  const githubLogin = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        setUser(result.user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+  const handleGoogleLogin = () => {
+    setIsLoading(true);
+    return signInWithPopup(auth, googleProvider);
   };
 
-  //Update User
+  const handleGithubLogin = () => {
+    return signInWithPopup(auth, githubProvider);
+  };
+
   useEffect(() => {
-    const unsubscribed = onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       }
+      setIsLoading(false);
     });
-
-    return unsubscribed;
   }, [auth]);
 
-  // Email password
-  const signInEmail = (email, password) => {
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        setUser({});
+        history.push(redirectURL);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  const handleUserRegister = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  const handleUserLogin = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const signUp = (email, password) => {
-    // setName
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((user) => {
-        console.log(user);
-      })
-      .catch((error) => {
-        setError("User already Exist");
-      });
-  };
-
-  //LogOut
-  const LogOut = () => {
-    signOut(auth).then(() => {
-      setUser({});
-    });
-  };
   return {
+    handleGoogleLogin,
     user,
-    signInGoogle,
-    githubLogin,
-    LogOut,
-    signInEmail,
-    errors,
-    signUp,
+    error,
+    isLoading,
+    handleGithubLogin,
+    handleLogout,
+    handleUserRegister,
+    handleUserLogin,
   };
 };
 

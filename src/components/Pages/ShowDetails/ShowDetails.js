@@ -25,8 +25,8 @@ const ShowDetails = () => {
         <div className="row w-100">
           <div className="col-10 col-sm-10 col-md-7 col-lg-7 mx-auto">
             <div className="show_services">
-              <h2 className="pt-4 fs-1 fw-bold my-5 ">{service?.title}</h2>
-
+              <h2 className="pt-4 fs-1 fw-bold ">{service?.title}</h2>
+              <hr className="text-danger mb-5" />
               <div className=" ">
                 <div>
                   <img

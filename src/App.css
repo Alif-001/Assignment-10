@@ -2,6 +2,13 @@ body {
   /* font-family: 'Oxygen', sans-serif; */
   font-family: "Poppins", sans-serif;
 }
+.spinner {
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
 .App {
   text-align: center;

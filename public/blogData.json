@@ -1,0 +1,36 @@
+[
+    {
+        "id":1,
+        "title":"Why Coronavirus Cases At Young Is Bad News","details":"A new surge of coronavirus cases has spread across the country and while there’s still so much to learn about the virus, how it’s transmitted and its long-term effects, the…",
+        "img":"https://images.pexels.com/photos/4031867/pexels-photo-4031867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        
+    }
+    ,
+    {
+        "id":2,
+        "title":"Why Do People Get Kidney Stones in the Summer?",
+        "details":"Summer may have just officially started, but kidney stone season began a couple of weeks ago. Doctors see an increase in kidney stone cases when the weather warms up.",
+        "img":"https://images.pexels.com/photos/3132388/pexels-photo-3132388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+   { "id":3,
+    "title":"Do Any Drugs Really Work to Treat Coronavirus?",
+    "details":"While most people who get COVID-19 are able to recover at home, the rush is on to find a treatment that’s safe and effective against life-threatening cases of the disease.",
+    "img":"https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+},
+   { "id":4,
+    "title":"Wearing a Face Mask?",
+    "details":"That means that you should still be following any shelter-in-place orders in your community. But when you’re venturing out to the grocery store, pharmacy or hospital, it’s wise to wear…",
+    "img":"https://images.pexels.com/photos/4429292/pexels-photo-4429292.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+},
+   { "id":5,
+    "title":"Unsure About Wearing Face Mask? Here’s How and Why",
+    "details":"It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a medical condition – and that’s certainly true if you test positive for COVID-19, or are presumed to be positive. If your symptoms aren’t severe and you can recover at home, this will involve home isolation until it’s safe for you to be near others without potentially spreading the infection.",
+    "img":"https://images.pexels.com/photos/7000149/pexels-photo-7000149.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+},
+   { "id":6,
+    "title":"6 Tips to Protect Your Mental Health When You’re Sick",
+    "details":"It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a medical condition – and that’s certainly true if you test positive for COVID-19, or are presumed to be positive. If your symptoms aren’t severe and you can recover at home, this will involve home isolation until it’s safe for you to be near others without potentially spreading the infection.",
+    "img":"https://images.pexels.com/photos/4472976/pexels-photo-4472976.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+}
+  
+]

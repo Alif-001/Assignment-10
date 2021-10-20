@@ -12,6 +12,7 @@ import Services from "./components/Pages/Services/Services";
 import ShowDetails from "./components/Pages/ShowDetails/ShowDetails";
 import AuthProvider from "./context/AuthProvider";
 import PrivetRoute from "./PrivateRoute/PrivateRoute";
+import Blogs from "./components/Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <PrivetRoute path="/services">
             <Services></Services>
+          </PrivetRoute>
+          <PrivetRoute path="/blogs">
+            <Blogs></Blogs>
           </PrivetRoute>
           <Route path="/contact">
             <Contact></Contact>

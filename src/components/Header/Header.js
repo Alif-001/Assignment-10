@@ -7,7 +7,7 @@ import "./Header.css";
 import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
-  const { user, LogOut } = useAuth();
+  const { user, handleLogout } = useAuth();
   const element = <FontAwesomeIcon icon={faMedkit} />;
   const element2 = <FontAwesomeIcon icon={faUser} />;
 
@@ -36,6 +36,9 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/services">
               Services
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/blogs">
+              Blog
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/about">
               About
             </Nav.Link>
@@ -45,7 +48,7 @@ const Header = () => {
             {user?.providerId ? (
               <>
                 {" "}
-                <div className="text-center d-flex userId ps-4 ">
+                <div className="text-center d-flex userId ps-3 text-secondary">
                   {element2}
                 </div>
                 <span className="nav-item">
@@ -56,7 +59,7 @@ const Header = () => {
                 </span>
                 <span className="nav-item">
                   <button
-                    onClick={LogOut}
+                    onClick={handleLogout}
                     title="LogOUt"
                     className="nav-link logout btn btn-secondary btn-sm text-white text-center mt-1 "
                   >

@@ -9,6 +9,7 @@ const HomeDetails = () => {
     <div className="services">
       <Container>
         <h1 className="mt-5">Top Service</h1>
+
         <hr className="bg-danger" />
         <Row xs={1} md={2} lg={3}>
           {services.slice(0, 6).map((service) => (
