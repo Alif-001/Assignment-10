@@ -1,22 +1,29 @@
 import React from "react";
-import helpImg from "./../../images/help-call/help-img.jpg";
+import "./Emergency.css";
+
 import phone from "./../../images/help-call/phone.png";
 
 const Emergency = () => {
   return (
-    <div className="container ">
-      <div className="row m-5">
-        <div className="col p-0">
-          <img className="p-0 img-fluid" src={helpImg} alt="" width="365px" />
+    <div className="container mt-5 contact-bg  contact-card w-50 d-flex rounded  justify-content-start">
+      <div className="container p-3 ms-5  d-flex w-75 justify-content-center   align-items-center ">
+        <div className="p-0 ms-4 contact-bg d-flex align-items-center  ">
+          <img className=" img-fluid" src={phone} alt="" width="200px" />
         </div>
-        <div className="col ">
-          <img src={phone} alt="" />
-        </div>
-        <div className="col  pt-5 mt-4">
-          <h3>Emergency Cases</h3>
-          <p className="p-font">
+        <div className="ps-3  contact-bg">
+          <h3 className="w-50 text-danger text-nowrap">Emergency Cases</h3>
+          <p className="p-font w-100 pe-3  ">
             Please feel welcome to contact our friendly reception staff with any
-            general or medical enquiry, you can call us at +002 01061245741
+            general or medical enquiry, you can call us at
+            <span className="text-danger text-nowrap ">
+              {" "}
+              <a
+                className="text-decoration-none link-danger"
+                href="tel:00201061245741"
+              >
+                +002 01060205040
+              </a>
+            </span>
           </p>
         </div>
       </div>

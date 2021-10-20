@@ -23,7 +23,7 @@ const service = ({ service }) => {
           <Card.Footer className="card-f bg-info">
             <NavLink
               to={`/services/${id}`}
-              className="btn btn-info text-white details-btn  btn-lg"
+              className="btn btn-info text-white details-btn  btn-lg mb-4"
             >
               Read More
             </NavLink>
