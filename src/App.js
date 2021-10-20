@@ -13,6 +13,7 @@ import ShowDetails from "./components/Pages/ShowDetails/ShowDetails";
 import AuthProvider from "./context/AuthProvider";
 import PrivetRoute from "./PrivateRoute/PrivateRoute";
 import Blogs from "./components/Pages/Blogs/Blogs";
+import Faq from "./components/Pages/Faq/Faq";
 
 function App() {
   return (
@@ -32,15 +33,18 @@ function App() {
           <Route path="/about">
             <About></About>
           </Route>
+          <Route path="/faq">
+            <Faq></Faq>
+          </Route>
           <PrivetRoute path="/services">
             <Services></Services>
           </PrivetRoute>
           <PrivetRoute path="/blogs">
             <Blogs></Blogs>
           </PrivetRoute>
-          <Route path="/contact">
+          <PrivetRoute path="/contact">
             <Contact></Contact>
-          </Route>
+          </PrivetRoute>
           <Route path="/login">
             <Login></Login>
           </Route>

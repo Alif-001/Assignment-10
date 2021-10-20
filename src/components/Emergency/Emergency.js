@@ -5,7 +5,7 @@ import phone from "./../../images/help-call/phone.png";
 
 const Emergency = () => {
   return (
-    <div className="container mt-5 contact-bg  contact-card w-50 d-flex rounded  justify-content-start">
+    <div className="container mt-5 contact-bg  contact-card w-50 border border-primary shadow d-flex rounded  justify-content-start">
       <div className="container p-3 ms-5  d-flex w-75 justify-content-center   align-items-center ">
         <div className="p-0 ms-4 contact-bg d-flex align-items-center  ">
           <img className=" img-fluid" src={phone} alt="" width="200px" />

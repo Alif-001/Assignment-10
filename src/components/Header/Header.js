@@ -32,15 +32,18 @@ const Header = () => {
           <Nav className="ms-auto fw-bold fs-5 menu me-2">
             <Nav.Link as={NavLink} to="/home">
               Home
+            </Nav.Link>{" "}
+            <Nav.Link as={NavLink} to="/about">
+              About
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/faq">
+              FAQ
             </Nav.Link>
             <Nav.Link as={NavLink} to="/services">
               Services
             </Nav.Link>
             <Nav.Link as={NavLink} to="/blogs">
               Blog
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/about">
-              About
             </Nav.Link>
             <Nav.Link as={NavLink} to="/contact">
               Contact
