@@ -101,7 +101,7 @@ const Login = () => {
                 </Button>
                 <div className="col-xs-12 col-sm-12 col-md-12 mt-3">
                   <p>
-                    <a href="password_reset_email.html">Forgot Password</a>
+                    <Link to="/notfound">Forgot Password</Link>
                   </p>
                   <p>
                     Don't have an account?
