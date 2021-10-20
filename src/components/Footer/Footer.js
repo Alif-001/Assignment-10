@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <footer className="container-fluid m-0 footer_top mt-5 bg-light">
+      <footer className="container-fluid m-0 footer_top  bg-light">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 col-lg-4 text-center">
             <div className="company_details text-start ps-4">
@@ -49,7 +49,7 @@ const Footer = () => {
       </footer>
       <footer className="container-fluid m-0 footer">
         <div className="text-center">
-          <p className="m-0">Copyright &copy; 2021 Health Cear</p>
+          <p className="m-0">Copyright &copy; 2021 Health Care</p>
         </div>
       </footer>
     </div>

@@ -6,8 +6,8 @@ import { Nav } from "react-bootstrap";
 
 const NotFound = () => {
   return (
-    <div className="not-found">
-      <div>
+    <div className="not-found container">
+      <div className="text-center">
         <img src={background} alt="" className="img-fluid" />
         <h1 className="not-found-message container">
           We are sorry,
