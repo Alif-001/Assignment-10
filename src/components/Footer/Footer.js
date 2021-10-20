@@ -19,10 +19,10 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4">
             <div className="location ps-2 text-center pt-5">
               <h1>
-                Heath<span className="text-danger">Care</span>
+                Heath<span className="text-danger"> Care</span>
               </h1>
             </div>
           </div>

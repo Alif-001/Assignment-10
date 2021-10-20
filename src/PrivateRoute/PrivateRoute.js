@@ -10,7 +10,7 @@ const PrivetRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) =>
-        user.email ? (
+        user.providerId ? (
           children
         ) : (
           <Redirect

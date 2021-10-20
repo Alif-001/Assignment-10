@@ -30,13 +30,13 @@ const ShowDetails = () => {
               <div className=" ">
                 <div>
                   <img
-                    className="text-center d-flex  img-fluid "
+                    className="text-center d-flex  img-fluid hover-img "
                     src={service?.img}
                     alt=""
                   />
                 </div>
                 <div>
-                  <p className="pt-4 text-start">{service?.details}</p>
+                  <p className="pt-4 text-start p-font ">{service?.details}</p>
                 </div>
                 <button className="btn btn-info fw-bold notFound-btn text-start d-flex my-2">
                   <Nav.Link as={NavLink} to="/home" className="text-white">

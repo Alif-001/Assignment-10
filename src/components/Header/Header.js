@@ -45,7 +45,9 @@ const Header = () => {
             {user?.providerId ? (
               <>
                 {" "}
-                <div className="text-center d-flex userId">{element2}</div>
+                <div className="text-center d-flex userId ps-4 ">
+                  {element2}
+                </div>
                 <span className="nav-item">
                   {" "}
                   <span className="nav-link">
