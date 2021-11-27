@@ -1,4 +1,13 @@
-# HEALTH CARE [link:https://health-care-official.web.app](https://health-care-official.web.app)
+# HEALTH CARE [link](https://health-care-official.web.app)
+
+* Functional hospital website with email-pass
+and google sign-in authentication system.
+
+* Desktop and mobile device responsive web
+app. Firebase is used for authentication.
+
+* Users can see doctors and service details if
+they are signed in.
 
 . this web is about a hospital . in here you can find good health services.
 Our institute provides care for our region’s most precious
