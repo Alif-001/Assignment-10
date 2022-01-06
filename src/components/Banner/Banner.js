@@ -11,7 +11,7 @@ const Banner = () => {
   return (
     <Carousel fade indicators={false}>
       <Carousel.Item indicators="false">
-        <img className="d-block w-100" src={img1} alt="Second slide" />
+        <img className="d-block w-100 b-img" src={img1} alt="Second slide" />
 
         <Carousel.Caption>
           <Fade right big cascade>
@@ -32,7 +32,7 @@ const Banner = () => {
       </Carousel.Item>
 
       <Carousel.Item indicators={false}>
-        <img className="d-block w-100" src={img2} alt="Third slide" />
+        <img className="d-block w-100 b-img" src={img2} alt="Third slide" />
 
         <Carousel.Caption>
           <Fade top big cascade>
