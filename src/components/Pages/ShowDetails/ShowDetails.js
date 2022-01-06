@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
-
 import useServices from "../../../hooks/useServices";
 
 // show details page
 const ShowDetails = () => {
+  // @ts-ignore
   const { id } = useParams();
   const [services] = useServices();
   const [service, setServices] = useState({});
   useEffect(() => {
+    // @ts-ignore
     const getServices = services.find((props) => props.id === parseInt(id));
     setServices(getServices);
   }, [services, id]);
