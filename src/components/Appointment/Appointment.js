@@ -16,7 +16,7 @@ const Appointment = () => {
           </p>
         </div>
         <div className="col-sm-12 col-md-12 col-lg-6 ">
-          <Form className=" border border-secondary rounded p-5">
+          <Form className=" border border-secondary rounded p-5 mb-4">
             <Row className="mb-3  ">
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
@@ -73,7 +73,7 @@ const Appointment = () => {
         </div>
         <div
           className=" d-flex
-        col-sm-12 col-md-12 col-lg-6  "
+        col-sm-12 col-md-12 col-lg-6 mb-4 "
         >
           <div
             className=" d-flex align-items-center "
