@@ -35,9 +35,9 @@ const Banner = () => {
         <img className="d-block w-100" src={img2} alt="Third slide" />
 
         <Carousel.Caption>
-          <Fade right big cascade>
+          <Fade top big cascade>
             <div>
-              <Fade right big cascade>
+              <Fade top big cascade>
                 <h5 className="banner_title">We Care for You</h5>
                 <p className="banner_text d-flex  justify-content-center">
                   efforts made to maintain or restore physical, mental, or ....
